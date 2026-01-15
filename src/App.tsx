@@ -1,13 +1,11 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
     <>
-      <HashRouter>
-        <Routes>
-          
-        </Routes>
-      </HashRouter>
+      <div className="w-screen h-screen"> {/*largura e altura da tela definidas numa div*/}
+        <Outlet /> {/*tudo que aparece na tela*/}
+      </div>
     </>
   )
 }
