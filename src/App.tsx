@@ -9,7 +9,7 @@ export default function App() {
   
   return (
     <>
-      <div className={`w-screen h-screen bg-[image:var(--${actualTheme}-bg)]`}> {/*largura e altura da tela definidas numa div*/}
+      <div className={`w-screen h-screen ${actualTheme == "dark" ? "bg-[image:var(--dark-bg)]" : "bg-[image:var(--light-bg)]"}`}> {/*largura e altura da tela definidas numa div*/}
         <Outlet /> {/*tudo que aparece na tela*/}
       </div>
     </>
