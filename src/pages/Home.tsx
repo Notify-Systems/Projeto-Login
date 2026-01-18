@@ -14,13 +14,14 @@ export default function Home(){
         <>
             <section className="flex flex-col justify-center items-center h-screen">
                 <Title text="ESTA É A PÁGINA PRINCIPAL"/>
-                <span className="text-[#888] text-[20px] mb-[20px] font-display italic">Nesta página, você consegue alterar o seu tema de tela</span> 
+                <span className="text-[#888] text-[20px] mb-5 font-display italic">Nesta página, você consegue alterar o seu tema de tela</span>
                 <div className={`flex flex-col w-[500px] rounded-lg border border-[#888]
                     ${actualTheme === "dark" ? "bg-[#1A1A1A]" : "bg[#EAEAEA]"}`}>
                     <ThemeButton newTheme="light" text="Tema Claro"/>
                     <ThemeButton newTheme="dark" text="Tema Escuro"/>
                     <ThemeButton newTheme="auto" text="Tema Automático"/>
                 </div>
+                <span className="text-[#888] text-[20px] mt-5 font-display italic">Seu tema atual é {theme}</span>
             </section>
             <section className="fixed bottom-5 left-3 flex flex-col gap-3">
                 <button

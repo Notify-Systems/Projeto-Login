@@ -18,7 +18,7 @@ export default function Login() {
                 <DataBox type="password" placeholder="Senha" />
                 <button type="button"
                     onClick={() => navigate("/home")}
-                    className={`w-[200px] h-[50px] rounded-lg border border-[#888] text-white text-[25px] font-bold font-display
+                    className={`w-[200px] h-[50px] rounded-lg border border-[#888] text-[25px] font-bold font-display
                         transition duration-300
                         ${actualTheme === "dark" ? "bg-[#1A1A1A] hover:bg-[#222] text-white" : "bg-[#EAEAEA] hover:bg-[#E2E2E2] text-black"}`}
                 >ENTRAR</button>
