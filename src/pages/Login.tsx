@@ -18,9 +18,9 @@ export default function Login() {
                 <DataBox type="password" placeholder="Senha" />
                 <button type="button"
                     onClick={() => navigate("/home")}
-                    className={`w-[125px] h-[40px] rounded-lg border border-[#888] text-[20px] font-bold font-display
+                    className={`px-4 py-1 rounded-lg border border-[#888] text-[15px] font-bold font-display
                         transition duration-300
-                        md:text-[25px] md:w-[200px] md:h-[50px]
+                        md:text-[25px]
                         ${actualTheme === "dark"
                             ?"bg-[#1A1A1A] hover:bg-[#222] text-white"
                             : "bg-[#EAEAEA] hover:bg-[#E2E2E2] text-black"
