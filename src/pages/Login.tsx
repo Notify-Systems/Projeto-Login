@@ -12,17 +12,21 @@ export default function Login() {
 
     return (
         <>
-            <section className="flex flex-col justify-center items-center h-screen gap-5"> {/*centralizando a div*/}
+            <section className="flex flex-col justify-center items-center h-screen gap-4 md:gap-5"> {/*centralizando a div*/}
                 <Title text="FAÇA SEU LOGIN" /> {/*adicionando o título em forma de componente*/}
                 <DataBox type="email" placeholder="E-mail" />
                 <DataBox type="password" placeholder="Senha" />
                 <button type="button"
                     onClick={() => navigate("/home")}
-                    className={`w-[200px] h-[50px] rounded-lg border border-[#888] text-[25px] font-bold font-display
+                    className={`w-[125px] h-[40px] rounded-lg border border-[#888] text-[20px] font-bold font-display
                         transition duration-300
-                        ${actualTheme === "dark" ? "bg-[#1A1A1A] hover:bg-[#222] text-white" : "bg-[#EAEAEA] hover:bg-[#E2E2E2] text-black"}`}
+                        md:text-[25px] md:w-[200px] md:h-[50px]
+                        ${actualTheme === "dark"
+                            ?"bg-[#1A1A1A] hover:bg-[#222] text-white"
+                            : "bg-[#EAEAEA] hover:bg-[#E2E2E2] text-black"
+                        }`}
                 >ENTRAR</button>
-                <span className="text-[#888] font-display italic">Ainda não é cadastrado?
+                <span className="text-[#888] font-display italic text-[12px] md:text-[16px]">Ainda não é cadastrado?
                     <a className="text-[#888] hover:underline hover:underline-gray-700 hover:text-gray-700 font-display"> Faça seu cadastro</a>
                 </span>
             </section>

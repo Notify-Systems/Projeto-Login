@@ -12,6 +12,9 @@ export default function Title({text}: Props)
     const actualTheme = theme === "auto" ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light") : theme;
 
     return(
-        <h1 className={`font-display text-[40px] font-bold mb-[5px] ${actualTheme == "dark" ? "text-white" : "text-black"}`}>{text}</h1>
+        <h1 className={`font-display text-[20px] font-bold mb-[5px]
+            ${actualTheme == "dark" ? "text-white" : "text-black"}
+            md:text-[40px]`}
+        >{text}</h1>
     )
 }
