@@ -9,12 +9,24 @@ export default function Login() {
     const emailRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
 
-    function login() {
+    async function login() {
         const email = emailRef.current?.value ?? "";
         const password = passwordRef.current?.value ?? "";
 
         if(email.trim() && password.trim() && emailRef.current?.checkValidity()) {
-            navigate("/home");
+            await fetch("http://localhost:8080/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                }),
+            })
+            .then(() => {
+                navigate("/home");
+            });
         }
     }
 

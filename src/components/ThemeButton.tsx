@@ -15,8 +15,8 @@ export default function ThemeButton({text, newTheme}: Props) {
     return (
         <button
             onClick={() => toggleTheme && toggleTheme(newTheme)}
-            className={`rounded-full w-[100%] font-display rounded-none text-left text-[12px] px-[15px] py-[8px] transition duration-300
-                first:rounded-t-lg last:rounded-b-lg md:text-[16px] md:px-[20px] md:py-[10px]
+            className={`rounded-full w-full font-display text-left text-[12px] px-[15px] py-2 transition duration-300
+                first:rounded-t-lg last:rounded-b-lg md:text-[16px] md:px-5 md:py-2.5
                 ${actualTheme == "dark" ? "text-white hover:bg-[#222]" : "text-black hover:bg-[#e2e2e2]"}`}>
             {text}
         </button>
