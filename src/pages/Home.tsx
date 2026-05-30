@@ -30,7 +30,7 @@ export default function Home(){
             </section>
             <section className="fixed bottom-5 left-3 flex flex-col gap-3">
                 <MenuButton text="EDITAR DADOS" />
-                <MenuButton text="SAIR" red onClick={() => navigate("/")} />
+                <MenuButton text="SAIR" red onClick={() => navigate("/login")} />
                 <MenuButton text="APAGAR CONTA" red />
             </section>
         </>

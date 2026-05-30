@@ -5,6 +5,7 @@ import './index.css'
 import { ThemeProvider } from './context/ThemeContext.tsx';
 import App from './App.tsx'
 import Login from "./pages/Login";
+import Register from "./pages/Register"
 import Home from './pages/Home.tsx';
 
 createRoot(document.getElementById('root')!).render(
@@ -13,8 +14,9 @@ createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}> {/*caminho até a página. A barra representa onde tudo começa*/}
-            <Route index element={<Login />} /> {/*interligação de páginas*/}
-            <Route path="home" element={<Home />}/>
+            <Route index element={<Home />}/>
+            <Route path="login" element={<Login />} /> {/*interligação de páginas*/}
+            <Route path="register" element={<Register />} />
           </Route>
         </Routes>
       </BrowserRouter>
