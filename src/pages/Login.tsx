@@ -17,7 +17,7 @@ export default function Login() {
         const password = passwordRef.current?.value ?? "";
 
         NProgress.start();
-        const response = await fetch("http://localhost:8080/login", {
+        const response = await fetch("http://localhost:8080/usuario/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export default function Login() {
         const data = await response.json();
 
         NProgress.done()
-        if(response.status === 200) {
+        if(response.status == 200) {
             localStorage.setItem("token", data.token)
             navigate("/home");
         }
@@ -44,7 +44,7 @@ export default function Login() {
     return (
         <>
             <section className="flex flex-col justify-center items-center h-screen gap-4 md:gap-5"> {/*centralizando a div*/}
-                <Title text="FAÇA SEU LOGIN" /> {/*adicionando o título em forma de componente*/}
+                <Title>FAÇA SEU LOGIN</Title>
                 <Input inputRef={emailRef} type="email" placeholder="E-mail" />
                 <Input inputRef={passwordRef} type="password" placeholder="Senha" />
                 <span className="text-[#FF0000]">{error}</span>

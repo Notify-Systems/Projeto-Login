@@ -43,7 +43,7 @@ export default function Register() {
                 title: "Registrado com sucesso!",
                 icon: "success",
                 theme: "dark"
-            }).then(() => navigate("/home"))
+            }).then(() => navigate("/login"))
         }
         else {
             setError(data.message);
@@ -52,7 +52,7 @@ export default function Register() {
 
     return (
         <section className="flex flex-col justify-center items-center h-screen gap-4 md:gap-5"> {/*centralizando a div*/}
-            <Title text="REGISTRE-SE" /> {/*adicionando o título em forma de componente*/}
+            <Title>REGISTRE-SE</Title>
             <Input inputRef={nameRef} placeholder="Nome de usuário" />
             <Input inputRef={emailRef} type="email" placeholder="E-mail" />
             <Input inputRef={passwordRef} type="password" placeholder="Senha" />

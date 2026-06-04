@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 type Props = {
-    text: string;
+    children: React.ReactNode;
 };
 
-export default function Title({text}: Props) 
+export default function Title({children}: Props) 
 {
     const context = useContext(ThemeContext);
     const theme = context?.theme;
@@ -15,6 +15,6 @@ export default function Title({text}: Props)
         <h1 className={`font-display text-[20px] font-bold mb-[5px]
             ${actualTheme == "dark" ? "text-white" : "text-black"}
             md:text-[40px]`}
-        >{text}</h1>
+        >{children}</h1>
     )
 }
